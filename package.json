@@ -12,8 +12,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "npm run lint && npm run test",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
     "format": "prettier --write \"**/*.{js,json,md}\"",
@@ -96,6 +96,11 @@
     "supertest": "^6.3.3"
   },
   "jest": {
+    "preset": "default",
+    "extensionsToTreatAsEsm": [".js"],
+    "globals": {
+      "__DEV__": true
+    },
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
@@ -108,7 +113,11 @@
       "text",
       "lcov",
       "html"
-    ]
+    ],
+    "transform": {},
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
   },
   "eslintConfig": {
     "extends": [
