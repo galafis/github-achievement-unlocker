@@ -1,11 +1,9 @@
 name: 'NPM Publish - Package Publishing Automation'
-
 # This workflow automates npm package publishing to unlock GitHub package publishing badges
 # Triggers on:
 # 1. New releases (tags starting with 'v')
 # 2. Manual dispatch for testing
 # 3. Push to main branch (for package verification)
-
 on:
   # Trigger on new releases
   release:
@@ -32,12 +30,10 @@ on:
       - 'src/**'
       - 'lib/**'
       - 'index.js'
-
 # Set environment variables
 env:
   NODE_VERSION: '20.x'
   NPM_REGISTRY: 'https://registry.npmjs.org/'
-
 # Define jobs
 jobs:
   # Job 1: Package Quality Checks
@@ -60,7 +56,7 @@ jobs:
       
       - name: 'Install Dependencies'
         run: |
-          npm ci --prefer-offline --no-audit
+          npm install --prefer-offline --no-audit
           echo "✅ Dependencies installed successfully"
       
       - name: 'Run Linting'
@@ -116,7 +112,7 @@ jobs:
       
       - name: 'Install Production Dependencies'
         run: |
-          npm ci --prefer-offline --no-audit --omit=dev
+          npm install --prefer-offline --no-audit --omit=dev
           echo "✅ Production dependencies installed"
       
       - name: 'Configure NPM Authentication'
@@ -179,7 +175,7 @@ jobs:
           scope: '@galafis'
       
       - name: 'Install Dependencies'
-        run: npm ci --prefer-offline --no-audit
+        run: npm install --prefer-offline --no-audit
       
       - name: 'Update Package Name for GitHub Packages'
         run: |
@@ -248,7 +244,7 @@ jobs:
           cache: 'npm'
       
       - name: 'Install Dependencies'
-        run: npm ci --prefer-offline --no-audit
+        run: npm install --prefer-offline --no-audit
       
       - name: 'Simulate Package Publishing (Dry Run)'
         run: |
