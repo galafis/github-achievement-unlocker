@@ -1,26 +1,147 @@
 {
   "name": "github-achievement-unlocker",
-  "version": "1.0.0",
-  "description": "🎯 Automated tool and strategies to unlock GitHub achievements and badges",
-  "main": "index.html",
+  "version": "1.1.0",
+  "description": "🎯 Automated tool and strategies to unlock GitHub achievements and badges through legitimate contributions and activities",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "npm run lint && npm run test",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.json",
+    "lint:fix": "eslint . --ext .js,.json --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\"",
+    "security:audit": "npm audit",
+    "security:fix": "npm audit fix",
+    "clean": "rimraf node_modules dist coverage .nyc_output",
+    "reinstall": "npm run clean && npm install",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
+    "release": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
   },
   "keywords": [
     "github",
     "achievements",
     "badges",
-    "automation"
+    "automation",
+    "github-api",
+    "contributions",
+    "developer-tools",
+    "git",
+    "nodejs",
+    "javascript",
+    "open-source",
+    "productivity",
+    "workflow",
+    "ci-cd",
+    "package-management"
   ],
-  "author": "Gabriel Demetrios Lafis",
+  "author": {
+    "name": "Gabriel Demetrios Lafis",
+    "email": "gabriel@galafis.dev",
+    "url": "https://github.com/galafis"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/galafis/github-achievement-unlocker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galafis/github-achievement-unlocker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/galafis/github-achievement-unlocker/issues"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
-    "lodash": "^4.17.19",
-    "express": "^4.17.1",
-    "moment": "^2.29.1"
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "semver": "^7.5.4",
+    "winston": "^3.11.0",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "jest": "^26.6.3",
-    "eslint": "^7.32.0"
+    "@types/jest": "^29.5.6",
+    "@types/node": "^20.8.7",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.4.2",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!node_modules/**",
+      "!coverage/**",
+      "!jest.config.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+      "plugin:jest/recommended",
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "es2022": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "error",
+      "prefer-const": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/galafis"
   }
 }
