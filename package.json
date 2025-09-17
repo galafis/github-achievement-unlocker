@@ -96,7 +96,6 @@
     "supertest": "^6.3.3"
   },
   "jest": {
-    "extensionsToTreatAsEsm": [".js"],
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
