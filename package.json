@@ -1,0 +1,26 @@
+{
+  "name": "github-achievement-unlocker",
+  "version": "1.0.0",
+  "description": "🎯 Automated tool and strategies to unlock GitHub achievements and badges",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "achievements",
+    "badges",
+    "automation"
+  ],
+  "author": "Gabriel Demetrios Lafis",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "eslint": "^7.32.0"
+  }
+}
