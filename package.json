@@ -1,5 +1,5 @@
 {
-  "name": "github-achievement-unlocker",
+  "name": "@galafis/github-achievement-unlocker",
   "version": "1.1.0",
   "description": "🎯 Automated tool and strategies to unlock GitHub achievements and badges through legitimate contributions and activities",
   "main": "index.js",
