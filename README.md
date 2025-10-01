@@ -34,20 +34,8 @@ This project provides a command-line interface (CLI) tool designed to help devel
 
 The `github-achievement-unlocker` is structured as a Node.js CLI application. Its architecture is designed for modularity and ease of maintenance:
 
-```mermaid
-graph TD
-    A[User] -->|Executes CLI commands| B(CLI Application)
-    B -->|Uses| C{Commander.js}
-    B -->|Logs output| D(Winston Logger)
-    B -->|Reads configuration| E[config/default.json]
-    B -->|Interacts with (simulated)| F[GitHub API (Future/Simulated)]
-    B -->|Generates| G[Markdown Templates]
-    C -->|Defines commands| B
-    D -->|Outputs to| H[Console]
-    E -->|Provides app settings| B
-    F -->|Provides achievement data| B
-    G -->|Displayed to| A
-```
+![Architecture Diagram](docs/architecture.png)
+
 
 **Components:**
 
