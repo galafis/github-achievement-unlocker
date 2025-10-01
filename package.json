@@ -2,18 +2,18 @@
   "name": "@galafis/github-achievement-unlocker",
   "version": "1.1.1",
   "description": "🎯 Automated tool and strategies to unlock GitHub achievements and badges through legitimate contributions and activities",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "engines": {
-    "node": ">>=18.0.0",
-    "npm": ">>=8.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "build": "echo 'Build step completed - package ready for publishing'",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage",
-    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
     "format": "prettier --write \"**/*.{js,json,md}\"",
@@ -60,8 +60,9 @@
     "url": "https://github.com/galafis/github-achievement-unlocker/issues"
   },
   "files": [
-    "index.js",
-    "lib/",
+    "src/index.js",
+    "src/logger.js",
+    "config/",
     "README.md",
     "LICENSE",
     "package.json"
@@ -99,7 +100,7 @@
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
-      "**/*.js",
+      "src/**/*.js",
       "!node_modules/**",
       "!coverage/**",
       "!jest.config.js"

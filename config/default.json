@@ -1,0 +1,13 @@
+{
+  "github": {
+    "apiBaseUrl": "https://api.github.com",
+    "achievementsEndpoint": "/users/{username}/achievements" 
+  },
+  "app": {
+    "name": "GitHub Achievement Unlocker",
+    "version": "1.1.1",
+    "author": "Gabriel Demetrios Lafis",
+    "license": "MIT",
+    "repository": "https://github.com/galafis/github-achievement-unlocker"
+  }
+}
