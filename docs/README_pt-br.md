@@ -36,7 +36,6 @@ O `github-achievement-unlocker` é estruturado como uma aplicação CLI Node.js.
 
 ![Diagrama de Arquitetura](architecture.png)
 
-
 **Componentes:**
 
 - **Aplicação CLI (src/index.js):** O núcleo da ferramenta, responsável pela análise e execução de comandos usando `commander.js`.
@@ -101,19 +100,19 @@ npm start info
 
 As seguintes conquistas são rastreadas e simuladas por esta ferramenta:
 
-| Categoria             | Nome da Conquista              | Descrição                                              | Requisitos                                           | Selo  |
-| :-------------------- | :----------------------------- | :----------------------------------------------------- | :--------------------------------------------------- | :---- |
-| **Repositório**       | Primeiro Repositório           | Criou seu primeiro repositório                         | Criar um repositório público                         | 🏠    |
-|                       | Repositório Público            | Tornou um repositório público                          | Ter um repositório público                           | 🌍    |
-|                       | Repositório Estrelado          | Deu estrela em um repositório                          | Dar estrela em qualquer repositório                  | ⭐    |
-| **Contribuições**     | Primeiro Commit                | Fez seu primeiro commit                                | Fazer um commit em qualquer repositório              | 📝    |
-|                       | Primeiro Pull Request          | Criou seu primeiro pull request                        | Abrir um pull request                                | 🔄    |
-|                       | Pull Request Mesclado          | Teve um pull request mesclado                          | Ter um pull request mesclado                         | ✅    |
-|                       | Quickdraw                      | Fechou uma issue ou pull request rapidamente           | Fechar uma issue/PR em 5 minutos                     | ⚡    |
-| **Publicação de Pacotes**| Primeiro Pacote                | Publicou seu primeiro pacote                           | Publicar um pacote no npm ou GitHub Packages         | 📦    |
-|                       | Publicador de Pacotes          | Publicador regular de pacotes                          | Publicar múltiplos pacotes                           | 🚀    |
-| **Especiais**         | Contribuidor do Arctic Code Vault | Contribuiu para o Programa de Arquivo do GitHub de 2020 | Teve código arquivado no Arctic Code Vault           | 🏔️    |
-|                       | Patrocinador do GitHub         | Patrocinou outro desenvolvedor                         | Patrocinar alguém no GitHub Sponsors                 | 💖    |
+| Categoria | Nome da Conquista | Descrição | Requisitos | Selo |
+| :-- | :-- | :-- | :-- | :-- |
+| **Repositório** | Primeiro Repositório | Criou seu primeiro repositório | Criar um repositório público | 🏠 |
+| | Repositório Público | Tornou um repositório público | Ter um repositório público | 🌍 |
+| | Repositório Estrelado | Deu estrela em um repositório | Dar estrela em qualquer repositório | ⭐ |
+| **Contribuições** | Primeiro Commit | Fez seu primeiro commit | Fazer um commit em qualquer repositório | 📝 |
+| | Primeiro Pull Request | Criou seu primeiro pull request | Abrir um pull request | 🔄 |
+| | Pull Request Mesclado | Teve um pull request mesclado | Ter um pull request mesclado | ✅ |
+| | Quickdraw | Fechou uma issue ou pull request rapidamente | Fechar uma issue/PR em 5 minutos | ⚡ |
+| **Publicação de Pacotes**| Primeiro Pacote | Publicou seu primeiro pacote | Publicar um pacote no npm ou GitHub Packages | 📦 |
+| | Publicador de Pacotes | Publicador regular de pacotes | Publicar múltiplos pacotes | 🚀 |
+| **Especiais** | Contribuidor do Arctic Code Vault | Contribuiu para o Programa de Arquivo do GitHub de 2020 | Teve código arquivado no Arctic Code Vault | 🏔️ |
+| | Patrocinador do GitHub | Patrocinou outro desenvolvedor | Patrocinar alguém no GitHub Sponsors | 💖 |
 
 ## Contribuindo
 
@@ -125,16 +124,14 @@ Contribuições são o que tornam a comunidade open source um lugar tão incrív
 4.  Envie para a Branch (`git push origin feature/AmazingFeature`)
 5.  Abra um Pull Request
 
-Consulte [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) para mais detalhes.
+Consulte [`CONTRIBUTING.md`](../CONTRIBUTING.md) para mais detalhes.
 
 ## Licença
 
-Distribuído sob a Licença MIT. Veja [`LICENSE`](docs/LICENSE) para mais informações.
+Distribuído sob a Licença MIT. Veja [`LICENSE`](../LICENSE) para mais informações.
 
 ## Autor
 
 **Gabriel Demetrios Lafis** - [Perfil do GitHub](https://github.com/galafis)
-
----
 
 *Este README.md foi gerado e aprimorado por Gabriel Demetrios Lafis.*

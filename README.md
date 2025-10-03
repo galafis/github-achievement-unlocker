@@ -36,7 +36,6 @@ The `github-achievement-unlocker` is structured as a Node.js CLI application. It
 
 ![Architecture Diagram](docs/architecture.png)
 
-
 **Components:**
 
 - **CLI Application (src/index.js):** The core of the tool, handling command parsing and execution using `commander.js`.
@@ -101,19 +100,19 @@ npm start info
 
 The following achievements are tracked and simulated by this tool:
 
-| Category              | Achievement Name               | Description                                            | Requirements                                        | Badge |
-| :-------------------- | :----------------------------- | :----------------------------------------------------- | :-------------------------------------------------- | :---- |
-| **Repository**        | First Repository               | Created your first repository                          | Create a public repository                          | 🏠    |
-|                       | Public Repository              | Made a repository public                               | Have a public repository                            | 🌍    |
-|                       | Starred Repository             | Starred a repository                                   | Star any repository                                 | ⭐    |
-| **Contributions**     | First Commit                   | Made your first commit                                 | Make a commit to any repository                     | 📝    |
-|                       | First Pull Request             | Created your first pull request                        | Open a pull request                                 | 🔄    |
-|                       | Pull Request Merged            | Had a pull request merged                              | Get a pull request merged                           | ✅    |
-|                       | Quickdraw                      | Closed an issue or pull request quickly                | Close an issue/PR within 5 minutes                  | ⚡    |
-| **Package Publishing**| First Package                  | Published your first package                           | Publish a package to npm or GitHub Packages         | 📦    |
-|                       | Package Publisher              | Regular package publisher                              | Publish multiple packages                           | 🚀    |
-| **Special**           | Arctic Code Vault Contributor  | Contributed to the 2020 GitHub Archive Program         | Had code archived in Arctic Code Vault              | 🏔️    |
-|                       | GitHub Sponsor                 | Sponsored another developer                            | Sponsor someone on GitHub Sponsors                  | 💖    |
+| Category | Achievement Name | Description | Requirements | Badge |
+| :-- | :-- | :-- | :-- | :-- |
+| **Repository** | First Repository | Created your first repository | Create a public repository | 🏠 |
+| | Public Repository | Made a repository public | Have a public repository | 🌍 |
+| | Starred Repository | Starred a repository | Star any repository | ⭐ |
+| **Contributions** | First Commit | Made your first commit | Make a commit to any repository | 📝 |
+| | First Pull Request | Created your first pull request | Open a pull request | 🔄 |
+| | Pull Request Merged | Had a pull request merged | Get a pull request merged | ✅ |
+| | Quickdraw | Closed an issue or pull request quickly | Close an issue/PR within 5 minutes | ⚡ |
+| **Package Publishing**| First Package | Published your first package | Publish a package to npm or GitHub Packages | 📦 |
+| | Package Publisher | Regular package publisher | Publish multiple packages | 🚀 |
+| **Special** | Arctic Code Vault Contributor | Contributed to the 2020 GitHub Archive Program | Had code archived in Arctic Code Vault | 🏔️ |
+| | GitHub Sponsor | Sponsored another developer | Sponsor someone on GitHub Sponsors | 💖 |
 
 ## Contributing
 
@@ -134,7 +133,5 @@ Distributed under the MIT License. See [`LICENSE`](docs/LICENSE) for more inform
 ## Author
 
 **Gabriel Demetrios Lafis** - [GitHub Profile](https://github.com/galafis)
-
----
 
 *This README.md was generated and enhanced by Gabriel Demetrios Lafis.*
