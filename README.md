@@ -77,11 +77,37 @@ npm start list
 
 ### Check achievements for a GitHub user (simulated)
 
+This command simulates checking achievements for a given GitHub username and now provides a detailed list of unlocked achievements.
+
 ```bash
 npm start check <username>
 # Example:
 npm start check galafis
 npm start check octocat
+```
+
+**Example Output for `npm start check octocat`:**
+
+```
+Simulating achievement check for user: octocat
+Simulated achievement check completed!
+
+🎉 Achievements for octocat:
+  📂 REPOSITORY:
+    🏠 First Repository
+    🌍 Public Repository
+    ⭐ Starred Repository
+  📂 CONTRIBUTIONS:
+    📝 First Commit
+    🔄 First Pull Request
+    ✅ Pull Request Merged
+    ⚡ Quickdraw
+  📂 PACKAGES:
+    📦 First Package
+    🚀 Package Publisher
+  📂 SPECIAL:
+    🏔️ Arctic Code Vault Contributor
+    💖 GitHub Sponsor
 ```
 
 ### Generate an achievement tracking Markdown template

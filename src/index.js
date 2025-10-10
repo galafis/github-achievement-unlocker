@@ -150,6 +150,23 @@ async function checkUserAchievements(username) {
   }
 
   logger.info("Simulated achievement check completed!");
+
+  if (Object.keys(userAchievements).length > 0) {
+    logger.info(chalk.bold.green(`\n🎉 Achievements for ${username}:`));
+    Object.entries(userAchievements).forEach(([category, achievements]) => {
+      logger.info(chalk.bold.yellow(`  📂 ${category.toUpperCase()}:`));
+      achievements.forEach(achievementName => {
+        const achievementInfo = ACHIEVEMENTS[category][achievementName];
+        if (achievementInfo) {
+          logger.info(`    ${achievementInfo.badge} ${chalk.bold(achievementName)}`);
+        } else {
+          logger.info(`    ${chalk.bold(achievementName)}`);
+        }
+      });
+    });
+  } else {
+    logger.info(chalk.yellow("No achievements found for this user (simulated)."));
+  }
   return userAchievements;
 }
 
