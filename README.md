@@ -10,8 +10,10 @@ An automated tool and strategies to unlock GitHub achievements and badges throug
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Architecture](#architecture)
 - [Installation](#installation)
+- [Running Tests](#running-tests)
 - [Usage](#usage)
 - [Achievements List](#achievements-list)
 - [Contributing](#contributing)
@@ -30,11 +32,56 @@ This project provides a command-line interface (CLI) tool designed to help devel
 - **Professional Structure:** Organized codebase with clear separation of concerns (src/, tests/, docs/, config/, public/).
 - **Unit Tests:** Ensures code reliability and functionality.
 
+## Screenshots
+
+### CLI Output Example
+
+```
+$ npm start check galafis
+
+Simulating achievement check for user: galafis
+Simulated achievement check completed!
+
+🎉 Achievements for galafis:
+  📂 REPOSITORY:
+    🏠 First Repository
+    🌍 Public Repository
+    ⭐ Starred Repository
+  📂 CONTRIBUTIONS:
+    📝 First Commit
+    🔄 First Pull Request
+    ✅ Pull Request Merged
+    ⚡ Quickdraw
+  📂 PACKAGES:
+    📦 First Package
+    🚀 Package Publisher
+  📂 SPECIAL:
+    🏔️ Arctic Code Vault Contributor
+    💖 GitHub Sponsor
+```
+
+### List Achievements Command
+
+```
+$ npm start list
+
+Available GitHub Achievements:
+  🏠 First Repository
+  🌍 Public Repository
+  ⭐ Starred Repository
+  📝 First Commit
+  🔄 First Pull Request
+  ✅ Pull Request Merged
+  ⚡ Quickdraw
+  📦 First Package
+  🚀 Package Publisher
+  🏔️ Arctic Code Vault Contributor
+  💖 GitHub Sponsor
+```
+
 ## Architecture
 
 The `github-achievement-unlocker` is structured as a Node.js CLI application. Its architecture is designed for modularity and ease of maintenance:
-
-![Architecture Diagram](docs/architecture.png)
 
 **Components:**
 
@@ -66,6 +113,23 @@ cd github-achievement-unlocker
 ```bash
 npm install
 ```
+
+## Running Tests
+
+To run the test suite and verify functionality:
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm test -- --watch
+
+# Run tests with verbose output
+npm test -- --verbose
+```
+
+The test suite includes unit tests for all core functionality and provides code coverage reports.
 
 ## Usage
 
