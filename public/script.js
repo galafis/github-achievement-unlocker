@@ -1,4 +1,4 @@
-import { ACHIEVEMENTS, checkUserAchievements } from '../src/index.js';
+import { ACHIEVEMENTS } from '../src/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const achievementsDisplay = document.getElementById('achievementsDisplay');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Display all achievements
     function renderAllAchievements() {
         achievementsDisplay.innerHTML = '';
-        Object.entries(ACHIEVEMENTS).forEach(([category, achievements]) => {
+        Object.entries(ACHIEVEMENTS).forEach(([, achievements]) => {
             Object.entries(achievements).forEach(([name, info]) => {
                 const card = document.createElement('div');
                 card.classList.add('achievement-card');

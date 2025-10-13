@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import { checkUserAchievements, ACHIEVEMENTS } from '../src/index.js';
+import { checkUserAchievements } from '../src/index.js';
 import logger from '../src/logger.js';
 
 describe('checkUserAchievements', () => {
