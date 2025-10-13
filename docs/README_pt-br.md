@@ -109,10 +109,16 @@ As seguintes conquistas são rastreadas e simuladas por esta ferramenta:
 | | Primeiro Pull Request | Criou seu primeiro pull request | Abrir um pull request | 🔄 |
 | | Pull Request Mesclado | Teve um pull request mesclado | Ter um pull request mesclado | ✅ |
 | | Quickdraw | Fechou uma issue ou pull request rapidamente | Fechar uma issue/PR em 5 minutos | ⚡ |
+| | YOLO | Mesclou um PR sem revisão | Mesclar um PR sem revisão de código no branch padrão | 🎲 |
+| | Pair Extraordinaire | Co-autorou commits em PR mesclado | Co-autorar um commit que é mesclado | 👥 |
 | **Publicação de Pacotes**| Primeiro Pacote | Publicou seu primeiro pacote | Publicar um pacote no npm ou GitHub Packages | 📦 |
 | | Publicador de Pacotes | Publicador regular de pacotes | Publicar múltiplos pacotes | 🚀 |
 | **Especiais** | Contribuidor do Arctic Code Vault | Contribuiu para o Programa de Arquivo do GitHub de 2020 | Teve código arquivado no Arctic Code Vault | 🏔️ |
 | | Patrocinador do GitHub | Patrocinou outro desenvolvedor | Patrocinar alguém no GitHub Sponsors | 💖 |
+| | Starstruck | Repositório recebeu muitas estrelas | Ter um repositório com 16+ estrelas (níveis em 16, 128, 512, 4096) | 🤩 |
+| | Pull Shark | Abriu múltiplos pull requests | Abrir 2+ pull requests (níveis em 2, 16, 128, 1024) | 🦈 |
+| | Galaxy Brain | Respondeu discussões | Ter 2+ respostas aceitas em discussões (níveis em 2, 8, 16, 32) | 🧠 |
+| | Heart On Your Sleeve | Reagiu com emoji ❤️ | Reagir a algo com emoji ❤️ | ❤️ |
 
 ## Contribuindo
 
