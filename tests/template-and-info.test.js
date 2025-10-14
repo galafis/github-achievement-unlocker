@@ -2,7 +2,12 @@
  * Tests for achievement template generation and package info display
  */
 import { jest } from '@jest/globals';
-import { generateTemplate, displayInfo, ACHIEVEMENTS } from '../src/index.js';
+import {
+  generateTemplate,
+  displayInfo,
+  displayAchievements,
+  ACHIEVEMENTS
+} from '../src/index.js';
 import logger from '../src/logger.js';
 
 describe('generateTemplate', () => {
@@ -162,8 +167,7 @@ describe('displayAchievements', () => {
     loggerInfoSpy.mockRestore();
   });
 
-  test('should display all achievements', async () => {
-    const { displayAchievements } = await import('../src/index.js');
+  test('should display all achievements', () => {
     displayAchievements();
     
     expect(loggerInfoSpy).toHaveBeenCalled();
@@ -172,8 +176,7 @@ describe('displayAchievements', () => {
     );
   });
 
-  test('should display all achievement categories', async () => {
-    const { displayAchievements } = await import('../src/index.js');
+  test('should display all achievement categories', () => {
     displayAchievements();
     
     const allCalls = loggerInfoSpy.mock.calls.map(call => String(call[0])).join(' ');
