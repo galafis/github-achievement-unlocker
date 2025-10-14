@@ -167,6 +167,7 @@ describe('displayAchievements', () => {
     loggerInfoSpy.mockRestore();
   });
 
+  // Testing synchronous logging behavior - displayAchievements() is a sync function
   test('should display all achievements', () => {
     displayAchievements();
     
@@ -176,6 +177,7 @@ describe('displayAchievements', () => {
     );
   });
 
+  // Validates that all achievement categories are logged synchronously
   test('should display all achievement categories', () => {
     displayAchievements();
     
