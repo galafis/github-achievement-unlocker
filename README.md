@@ -1,8 +1,8 @@
-# GitHub Achievement Unlocker
+# GitHub Achievement Unlocker 🎯
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/galafis/github-achievement-unlocker/main.yml?branch=main) ![GitHub license](https://img.shields.io/github/license/galafis/github-achievement-unlocker) ![npm version](https://img.shields.io/npm/v/@galafis/github-achievement-unlocker) ![GitHub contributors](https://img.shields.io/github/contributors/galafis/github-achievement-unlocker)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/galafis/github-achievement-unlocker/main.yml?branch=main) ![GitHub license](https://img.shields.io/github/license/galafis/github-achievement-unlocker) ![npm version](https://img.shields.io/npm/v/@galafis/github-achievement-unlocker) ![GitHub contributors](https://img.shields.io/github/contributors/galafis/github-achievement-unlocker) ![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
-An automated tool and strategies to unlock GitHub achievements and badges through legitimate contributions and activities.
+An automated CLI tool and comprehensive strategy guide to unlock GitHub achievements and badges through legitimate contributions and activities.
 
 [English Version](README.md) | [Versão em Português](docs/README_pt-br.md)
 
@@ -16,7 +16,12 @@ An automated tool and strategies to unlock GitHub achievements and badges throug
 - [Running Tests](#running-tests)
 - [Usage](#usage)
 - [Achievements List](#achievements-list)
+- [Examples](#examples)
+- [FAQ](#faq)
+- [Troubleshooting](#troubleshooting)
+- [API Documentation](#api-documentation)
 - [Contributing](#contributing)
+- [Changelog](#changelog)
 - [License](#license)
 - [Author](#author)
 
@@ -83,6 +88,8 @@ Available GitHub Achievements:
 
 The `github-achievement-unlocker` is structured as a Node.js CLI application. Its architecture is designed for modularity and ease of maintenance:
 
+![Architecture Diagram](docs/architecture.png)
+
 **Components:**
 
 - **CLI Application (src/index.js):** The core of the tool, handling command parsing and execution using `commander.js`.
@@ -90,6 +97,7 @@ The `github-achievement-unlocker` is structured as a Node.js CLI application. It
 - **Configuration (config/default.json):** Stores application settings, such as GitHub API endpoints and application metadata.
 - **GitHub API (Simulated):** Currently, achievement checking is simulated due to the lack of a public GitHub API for achievements. This section is designed for future integration if an API becomes available.
 - **Markdown Templates:** Used for generating achievement tracking templates.
+- **Web Demo (public/):** Interactive web interface for achievement exploration.
 
 ## Installation
 
@@ -198,11 +206,226 @@ The following achievements are tracked and simulated by this tool:
 | **Contributions** | First Commit | Made your first commit | Make a commit to any repository | 📝 |
 | | First Pull Request | Created your first pull request | Open a pull request | 🔄 |
 | | Pull Request Merged | Had a pull request merged | Get a pull request merged | ✅ |
-| | Quickdraw | Closed an issue or pull request quickly | Close an issue/PR within 5 minutes | ⚡ |
+| | Quickdraw | Closed an issue or PR quickly | Close an issue/PR within 5 minutes | ⚡ |
+| | YOLO | Merged a PR without review | Merge a PR without code review on default branch | 🎲 |
+| | Pair Extraordinaire | Coauthored commits on merged PR | Coauthor a commit that gets merged | 👥 |
 | **Package Publishing**| First Package | Published your first package | Publish a package to npm or GitHub Packages | 📦 |
 | | Package Publisher | Regular package publisher | Publish multiple packages | 🚀 |
 | **Special** | Arctic Code Vault Contributor | Contributed to the 2020 GitHub Archive Program | Had code archived in Arctic Code Vault | 🏔️ |
 | | GitHub Sponsor | Sponsored another developer | Sponsor someone on GitHub Sponsors | 💖 |
+| | Starstruck | Repository got many stars | Have a repository with 16+ stars (tiers at 16, 128, 512, 4096) | 🤩 |
+| | Pull Shark | Opened multiple pull requests | Open 2+ pull requests (tiers at 2, 16, 128, 1024) | 🦈 |
+| | Galaxy Brain | Answered discussions | Have 2+ accepted answers in discussions (tiers at 2, 8, 16, 32) | 🧠 |
+| | Heart On Your Sleeve | Reacted with ❤️ emoji | React to something with a ❤️ emoji | ❤️ |
+
+### Achievement Tiers
+
+Many achievements have multiple tiers based on frequency:
+
+- 🥉 **Bronze**: First tier (e.g., 2 PRs for Pull Shark)
+- 🥈 **Silver**: Second tier (e.g., 16 PRs)
+- 🥇 **Gold**: Third tier (e.g., 128 PRs)
+- 💎 **Diamond**: Fourth tier (e.g., 1024 PRs)
+
+## Examples
+
+Check out the [examples directory](examples/) for detailed guides and use cases:
+
+- **[Basic Usage](examples/basic-usage.md)** - Getting started with CLI commands
+- **[Achievement Tracking](examples/achievement-tracking.md)** - Strategies to unlock achievements
+- **Custom Scripts** - Automation and integration examples
+
+Quick example:
+```bash
+# List all achievements
+npm start list
+
+# Check achievements for a user
+npm start check octocat
+
+# Generate tracking template
+npm start template > MY_ACHIEVEMENTS.md
+```
+
+## FAQ
+
+### How does achievement checking work?
+
+Currently, the tool simulates achievement checking because GitHub doesn't provide a public API for achievements. The simulation is based on predefined logic for demonstration purposes.
+
+### Can I use this tool with the real GitHub API?
+
+The tool is designed to support real GitHub API integration in the future if GitHub releases an achievements API. Currently, it uses simulated data.
+
+### How accurate are the achievement requirements?
+
+The requirements are based on publicly available information about GitHub achievements. They may not be 100% accurate as GitHub doesn't officially document all achievement criteria.
+
+### Is this tool affiliated with GitHub?
+
+No, this is an independent open-source project created to help developers understand and track GitHub achievements.
+
+### Can I contribute new achievements?
+
+Yes! Please check the [Contributing Guide](docs/CONTRIBUTING.md) and submit a pull request with new achievement definitions.
+
+### How often should I update the tool?
+
+Check for updates regularly with `npm update @galafis/github-achievement-unlocker` to get the latest achievement definitions and features.
+
+### Does this tool violate GitHub's Terms of Service?
+
+No, this tool encourages legitimate contributions and activities. It doesn't automate actions or manipulate the GitHub platform.
+
+## Troubleshooting
+
+### Command not found error
+
+**Problem:** Getting "command not found" when running npm start
+
+**Solution:**
+```bash
+# Make sure you're in the correct directory
+cd github-achievement-unlocker
+
+# Reinstall dependencies
+npm install
+
+# Try running again
+npm start list
+```
+
+### ESLint errors
+
+**Problem:** Linting fails with errors
+
+**Solution:**
+```bash
+# Fix automatically
+npm run lint:fix
+
+# Or check what needs fixing
+npm run lint
+```
+
+### Tests failing
+
+**Problem:** `npm test` shows failing tests
+
+**Solution:**
+```bash
+# Clear cache and reinstall
+npm run clean
+npm install
+
+# Run tests with verbose output
+npm test -- --verbose
+```
+
+### Module not found error
+
+**Problem:** Import errors or missing modules
+
+**Solution:**
+```bash
+# Reinstall all dependencies
+npm run reinstall
+```
+
+### Permission denied errors
+
+**Problem:** Cannot execute commands or access files
+
+**Solution:**
+```bash
+# Fix permissions (Linux/macOS)
+chmod +x src/index.js
+
+# Or run with node directly
+node src/index.js list
+```
+
+## API Documentation
+
+### Main Functions
+
+#### `displayAchievements()`
+Displays all available GitHub achievements with their requirements.
+
+**Usage:**
+```javascript
+import { displayAchievements } from '@galafis/github-achievement-unlocker';
+displayAchievements();
+```
+
+#### `checkUserAchievements(username)`
+Simulates checking achievements for a GitHub user.
+
+**Parameters:**
+- `username` (string): GitHub username to check
+
+**Returns:** Promise<Object> - Object containing unlocked achievements by category
+
+**Usage:**
+```javascript
+import { checkUserAchievements } from '@galafis/github-achievement-unlocker';
+
+const achievements = await checkUserAchievements('octocat');
+console.log(achievements);
+// { repository: ['First Repository', ...], contributions: [...], ... }
+```
+
+#### `generateTemplate()`
+Generates a Markdown template for tracking achievements.
+
+**Usage:**
+```javascript
+import { generateTemplate } from '@galafis/github-achievement-unlocker';
+generateTemplate();
+```
+
+#### `displayInfo()`
+Displays package information including version and author.
+
+**Usage:**
+```javascript
+import { displayInfo } from '@galafis/github-achievement-unlocker';
+displayInfo();
+```
+
+### ACHIEVEMENTS Object
+
+Contains all achievement definitions organized by category.
+
+**Structure:**
+```javascript
+{
+  repository: {
+    'Achievement Name': {
+      description: 'Description of the achievement',
+      requirements: 'Requirements to unlock',
+      badge: '🏠'
+    },
+    // ...
+  },
+  contributions: { /* ... */ },
+  packages: { /* ... */ },
+  special: { /* ... */ }
+}
+```
+
+**Usage:**
+```javascript
+import { ACHIEVEMENTS } from '@galafis/github-achievement-unlocker';
+
+// Access specific achievement
+const firstRepo = ACHIEVEMENTS.repository['First Repository'];
+console.log(firstRepo.description);
+```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes.
 
 ## Contributing
 

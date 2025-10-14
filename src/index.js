@@ -74,6 +74,16 @@ const ACHIEVEMENTS = {
       description: 'Closed an issue or pull request quickly',
       requirements: 'Close an issue/PR within 5 minutes',
       badge: '⚡'
+    },
+    'YOLO': {
+      description: 'Merged a pull request without review',
+      requirements: 'Merge a PR without code review on the default branch',
+      badge: '🎲'
+    },
+    'Pair Extraordinaire': {
+      description: 'Coauthored commits on merged pull request',
+      requirements: 'Coauthor a commit that gets merged',
+      badge: '👥'
     }
   },
   
@@ -102,6 +112,26 @@ const ACHIEVEMENTS = {
       description: 'Sponsored another developer',
       requirements: 'Sponsor someone on GitHub Sponsors',
       badge: '💖'
+    },
+    'Starstruck': {
+      description: 'Repository got many stars',
+      requirements: 'Have a repository with 16+ stars (tiers at 16, 128, 512, 4096)',
+      badge: '🤩'
+    },
+    'Pull Shark': {
+      description: 'Opened multiple pull requests',
+      requirements: 'Open 2+ pull requests (tiers at 2, 16, 128, 1024)',
+      badge: '🦈'
+    },
+    'Galaxy Brain': {
+      description: 'Answered discussions and got accepted answers',
+      requirements: 'Have 2+ accepted answers in discussions (tiers at 2, 8, 16, 32)',
+      badge: '🧠'
+    },
+    'Heart On Your Sleeve': {
+      description: 'Reacted with ❤️ emoji on GitHub',
+      requirements: 'React to something with a ❤️ emoji',
+      badge: '❤️'
     }
   }
 };

@@ -1,0 +1,43 @@
+name: Documentation Issue
+description: Report an issue or suggest improvements to documentation
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve our documentation! Please describe the issue or improvement.
+  
+  - type: textarea
+    id: issue
+    attributes:
+      label: Documentation Issue
+      description: Describe what's unclear, incorrect, or missing in the documentation
+      placeholder: The documentation about...
+    validations:
+      required: true
+  
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where is the documentation issue? (file path, URL, section name)
+      placeholder: "README.md, line 42"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How would you improve this documentation?
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
