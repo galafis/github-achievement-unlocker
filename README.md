@@ -1,6 +1,5 @@
 # GitHub Achievement Unlocker 🎯
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/galafis/github-achievement-unlocker/main.yml?branch=main) ![GitHub license](https://img.shields.io/github/license/galafis/github-achievement-unlocker) ![npm version](https://img.shields.io/npm/v/@galafis/github-achievement-unlocker) ![GitHub contributors](https://img.shields.io/github/contributors/galafis/github-achievement-unlocker) ![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
 An automated CLI tool and comprehensive strategy guide to unlock GitHub achievements and badges through legitimate contributions and activities.
 
